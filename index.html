@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="قهوة عُمانية فاخرة — تجربة أصيلة من تراث السلطنة">
+    <meta name="theme-color" content="#8B7355">
+    <title>قهوة الأصالة — تراث عُماني فاخر</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Lora:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sand: '#E8DCC4',
+                        gold: '#C9A86A',
+                        coffee: '#3E2723',
+                        cream: '#F5F0E8'
+                    },
+                    fontFamily: {
+                        arabic: ['Amiri', 'serif'],
+                        serif: ['Lora', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        * {
+            font-family: 'Amiri', serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #F5F0E8 0%, #E8DCC4 100%);
+        }
+        
+        .hero-overlay {
+            background: linear-gradient(to bottom, rgba(62,39,35,0.3), rgba(62,39,35,0.7));
+        }
+        
+        .fade-in {
+            animation: fadeIn 1.2s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(62,39,35,0.15);
+        }
+        
+        .ornament {
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #C9A86A, transparent);
+            margin: 2rem auto;
+        }
+    </style>
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+</head>
+<body class="bg-cream">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-cream/95 backdrop-blur-md shadow-sm z-50 fade-in">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-coffee">قهوة الأصالة</div>
+            <div class="flex gap-8 text-lg">
+                <a href="#hero" class="text-coffee hover:text-gold transition-colors">الرئيسية</a>
+                <a href="#story" class="text-coffee hover:text-gold transition-colors">قصتنا</a>
+                <a href="#menu" class="text-coffee hover:text-gold transition-colors">القائمة</a>
+                <a href="#contact" class="text-coffee hover:text-gold transition-colors">تواصل</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center text-center pt-20">
+        <div class="absolute inset-0 hero-overlay"></div>
+        <img src="https://v3b.fal.media/files/b/0a9fffe0/gRQqgVD39hYa6i6qq-ZBY.jpg" alt="قهوة عُمانية تراثية" class="absolute inset-0 w-full h-full object-cover">
+        
+        <div class="relative z-10 text-white px-6 fade-in">
+            <div class="ornament"></div>
+            <h1 class="text-6xl md:text-7xl font-bold mb-6 leading-tight">قهوة الأصالة</h1>
+            <p class="text-2xl md:text-3xl mb-4 text-sand">تراث عُماني يُحتسى في كل رشفة</p>
+            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto text-sand/90">
+                من قلب السلطنة، نقدّم لكم تجربة القهوة العُمانية الأصيلة<br>
+                بنكهة الزعفران والهيل والتاريخ
+            </p>
+            <div class="ornament"></div>
+            <a href="#menu" class="inline-block bg-gold hover:bg-coffee text-white px-12 py-4 rounded-full text-xl font-semibold transition-all shadow-lg hover:shadow-xl mt-6">
+                اكتشف القائمة
+            </a>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section id="story" class="py-24 px-6">
+        <div class="container mx-auto max-w-4xl text-center">
+            <div class="ornament"></div>
+            <h2 class="text-5xl font-bold text-coffee mb-6">قصة الأصالة</h2>
+            <p class="text-xl text-coffee/80 leading-relaxed mb-8">
+                منذ قرون، والقهوة العُمانية تمثّل كرم الضيافة وأصالة التراث. نحن نحمل هذا الإرث بفخر، 
+                ونقدّم لكم قهوة محمّصة بعناية، مطحونة يدوياً، ومُنكّهة بأجود أنواع الزعفران والهيل.
+            </p>
+            <p class="text-xl text-coffee/80 leading-relaxed">
+                كل فنجان يحكي حكاية — من جبال الحجر إلى دلّة الضيافة، من الماضي العريق إلى حاضركم الأنيق.
+            </p>
+            <div class="ornament"></div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-24 px-6 bg-white/50">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-16">
+                <div class="ornament"></div>
+                <h2 class="text-5xl font-bold text-coffee mb-4">قائمتنا الفاخرة</h2>
+                <p class="text-xl text-coffee/70">تجربة متنوعة من الأصالة</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Item 1 -->
+                <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-gold to-coffee"></div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-2xl font-bold text-coffee mb-2">القهوة الكلاسيكية</h3>
+                        <p class="text-coffee/70 mb-4">هيل وزعفران بنسب تراثية أصيلة</p>
+                        <p class="text-3xl font-bold text-gold">١٢ ر.ع</p>
+                    </div>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-coffee to-sand"></div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-2xl font-bold text-coffee mb-2">قهوة الزعفران الملكي</h3>
+                        <p class="text-coffee/70 mb-4">خيوط زعفران فارسي نقية</p>
+                        <p class="text-3xl font-bold text-gold">١٨ ر.ع</p>
+                    </div>
+                </div>
+                
+                <!-- Item 3 -->
+                <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-sand to-gold"></div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-2xl font-bold text-coffee mb-2">قهوة الورد الطائفي</h3>
+                        <p class="text-coffee/70 mb-4">ماء ورد طبيعي مع حبوب مختارة</p>
+                        <p class="text-3xl font-bold text-gold">١٥ ر.ع</p>
+                    </div>
+                </div>
+                
+                <!-- Item 4 -->
+                <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-gold to-sand"></div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-2xl font-bold text-coffee mb-2">قهوة البهارات السبعة</h3>
+                        <p class="text-coffee/70 mb-4">مزيج سري من بهارات التوابل</p>
+                        <p class="text-3xl font-bold text-gold">١٦ ر.ع</p>
+                    </div>
+                </div>
+                
+                <!-- Item 5 -->
+                <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-coffee to-gold"></div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-2xl font-bold text-coffee mb-2">قهوة اللبان العُماني</h3>
+                        <p class="text-coffee/70 mb-4">نكهة فريدة من لبان ظفار</p>
+                        <p class="text-3xl font-bold text-gold">٢٠ ر.ع</p>
+                    </div>
+                </div>
+                
+                <!-- Item 6 -->
+                <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-sand to-coffee"></div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-2xl font-bold text-coffee mb-2">طقم الأصالة الكامل</h3>
+                        <p class="text-coffee/70 mb-4">دلّة فضية + 6 فناجين + ٢٥٠ جرام</p>
+                        <p class="text-3xl font-bold text-gold">٧٥ ر.ع</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center mb-12">
+                <div class="ornament"></div>
+                <h2 class="text-5xl font-bold text-coffee mb-4">تواصل معنا</h2>
+                <p class="text-xl text-coffee/70">نسعد بخدمتكم</p>
+            </div>
+            
+            <div class="bg-white rounded-3xl shadow-2xl p-10">
+                <form class="space-y-6">
+                    <div>
+                        <label class="block text-coffee text-lg mb-2">الاسم</label>
+                        <input type="text" class="w-full px-6 py-4 rounded-xl border-2 border-sand focus:border-gold outline-none transition-colors text-lg" placeholder="اسمك الكريم">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-coffee text-lg mb-2">الهاتف</label>
+                        <input type="tel" class="w-full px-6 py-4 rounded-xl border-2 border-sand focus:border-gold outline-none transition-colors text-lg" placeholder="+968 1234 5678" dir="ltr">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-coffee text-lg mb-2">الرسالة</label>
+                        <textarea rows="5" class="w-full px-6 py-4 rounded-xl border-2 border-sand focus:border-gold outline-none transition-colors text-lg" placeholder="كيف نخدمك؟"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-gold hover:bg-coffee text-white py-5 rounded-xl text-xl font-semibold transition-all shadow-lg hover:shadow-xl">
+                        إرسال
+                    </button>
+                </form>
+                
+                <div class="mt-10 pt-10 border-t-2 border-sand text-center space-y-3">
+                    <p class="text-coffee text-lg">📍 مسقط، السلطنة العُمانية</p>
+                    <p class="text-coffee text-lg">📞 <span dir="ltr">+968 9123 4567</span></p>
+                    <p class="text-coffee text-lg">✉️ info@qahwa-asala.om</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-coffee text-sand py-12 px-6">
+        <div class="container mx-auto text-center">
+            <div class="ornament bg-gradient-to-r from-transparent via-gold to-transparent"></div>
+            <p class="text-2xl font-bold mb-4">قهوة الأصالة</p>
+            <p class="text-lg mb-6">تراث يُحتسى، وأصالة تُعاش</p>
+            <p class="text-sm text-sand/70">© 2024 جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
